@@ -1,0 +1,104 @@
+.tsd-container {
+  width: 100%;
+  padding: 1em;
+  margin: auto;
+}
+
+.tsd-card {
+  padding: 2em;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tsd-vdiv {
+  width: 2px;
+  margin: 20px 8px 0;
+  padding: 0 !important;
+  background: blue;
+}
+
+.tsd-hdiv {
+  height: 2px;
+  margin: 8px 20px;
+  padding: 0 !important;
+  background: blue;
+}
+
+.tsd-bargraph {
+  height: 2em;
+  margin: 8px 8px;
+  padding: 0 !important;
+  background: white;
+  border: 1px solid black;
+}
+
+.tsd-bargraph-span {
+  height: 2em;
+  display: block;
+  background: gray;
+}
+
+.candidate-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-section {
+  margin: 1em 0;
+  border-radius: 8px;
+  background: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pi-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.pi-content > div {
+  padding: 1em;
+}
+
+.candidate-img {
+  width: 130px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-bottom: 1em;
+}
+
+.personal-info-section {
+  padding: 2rem;
+  height: 450px;
+  overflow-y: auto;
+  border: 1px solid #888;
+  width: 400px;
+  margin: 2rem auto;
+}
+
+.tab-section {
+  padding: 1em 1em 3em;
+  margin-top: 0;
+  border: 1px solid #888;
+}
+/*# sourceMappingURL=personalInfo.css.map */
