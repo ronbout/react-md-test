@@ -1,0 +1,11 @@
+.App {
+	text-align: center;
+}
+
+@import "react-md-globals";
+
+@include react-md-everything;
+
+body {
+	margin: 0;
+}
