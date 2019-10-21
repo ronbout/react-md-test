@@ -97,9 +97,8 @@ const RegisterForm = ({ userInfo, clearFormFields, handleSubmit }) => {
 							value={formFields.objective}
 						/>
 						<InpPhone
+							id="personal-phone"
 							name="personal-phone"
-							defaultCountry={"us"}
-							preferredCountries={["us", "gb", "ie", "in"]}
 							label="phone input"
 							value={formFields.personal.phone}
 						/>

@@ -1,5 +1,4 @@
-button.MuiButtonBase-root,
-button.md-btn {
+.btns-container button.md-btn {
   margin: 2rem 1rem;
 }
 
