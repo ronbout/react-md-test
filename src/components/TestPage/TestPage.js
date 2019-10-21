@@ -1,33 +1,52 @@
 import React from "react";
 import RegisterFormContainer from "components/forms/RegisterFormContainer";
 import PersonalInfo from "components/PersonalInfo/PersonalInfo";
-import {
-	TabbedUI,
-	TabList,
-	Tab,
-	TabPanels,
-	TabPanel
-} from "components/TabbedUI/TabbedUI";
+import { TabsContainer, Tabs, Tab } from "react-md";
+// import {
+// 	TabbedUI,
+// 	TabList,
+// 	Tab,
+// 	TabPanels,
+// 	TabPanel
+// } from "components/TabbedUI/TabbedUI";
+
+// const TestPage = props => {
+// 	return (
+// 		<div className="test-page" style={{ padding: "1rem 2rem" }}>
+// 			<h2>Amazing Test Page</h2>
+// 			<TabbedUI>
+// 				<TabList>
+// 					<Tab>Wonderful Form</Tab>
+// 					<Tab>Incredible Personal Info</Tab>
+// 				</TabList>
+// 				<TabPanels>
+// 					<TabPanel>
+// 						{" "}
+// 						<RegisterFormContainer />
+// 					</TabPanel>
+// 					<TabPanel>
+// 						<PersonalInfo />
+// 					</TabPanel>
+// 				</TabPanels>
+// 			</TabbedUI>
+// 		</div>
+// 	);
+// };
 
 const TestPage = props => {
 	return (
 		<div className="test-page" style={{ padding: "1rem 2rem" }}>
 			<h2>Amazing Test Page</h2>
-			<TabbedUI>
-				<TabList>
-					<Tab>Wonderful Form</Tab>
-					<Tab>Incredible Personal Info</Tab>
-				</TabList>
-				<TabPanels>
-					<TabPanel>
-						{" "}
+			<TabsContainer panelClassName="md-grid" colored>
+				<Tabs tabId="test-page">
+					<Tab label="Wonderful Form">
 						<RegisterFormContainer />
-					</TabPanel>
-					<TabPanel>
+					</Tab>
+					<Tab label="Incredible Personal Info">
 						<PersonalInfo />
-					</TabPanel>
-				</TabPanels>
-			</TabbedUI>
+					</Tab>
+				</Tabs>
+			</TabsContainer>
 		</div>
 	);
 };

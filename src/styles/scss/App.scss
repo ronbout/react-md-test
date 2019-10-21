@@ -4,8 +4,12 @@
 
 @import "react-md-globals";
 
-@include react-md-everything;
-
 body {
 	margin: 0;
+}
+
+/*  make tabs full screen */
+ul.md-tabs li.md-tab {
+	max-width: none;
+	flex-grow: 1;
 }

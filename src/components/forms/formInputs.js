@@ -54,7 +54,6 @@ export const Form = ({ children, ...props }) => {
 
 	const handleSubmit = ev => {
 		ev.preventDefault && ev.preventDefault();
-		console.log("Can I check validation here???");
 		if (formIsValid()) {
 			state.onSubmitFn(ev);
 		}
@@ -707,7 +706,7 @@ export const InpZip = props => {
 
 	return (
 		<Input
-			type="zipcode"
+			type="text"
 			name={name}
 			value={value}
 			onChange={handleChange}
@@ -769,10 +768,15 @@ export const InpTextArea = props => {
 			}
 		}
 	};
-
-	const handleChange = ev => {
-		if (errMsg) performErrCheck(ev.target.value);
-		state.onChangeFn(ev);
+	const handleChange = val => {
+		//checkRequired(ev.target.value);
+		// react-md only returns the value
+		// must mimic event to stay consistent
+		const event = { target: {} };
+		event.target.value = val;
+		event.target.name = props.name;
+		if (errMsg) performErrCheck(val);
+		state.onChangeFn(event);
 	};
 
 	const handleInput = ev => {

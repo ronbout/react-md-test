@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles/css/App.css";
 import TestPage from "components/TestPage/TestPage";
-import { Button } from "react-md";
 
 // test all-purpose setForm hooks for setting up standard forms
 const App = () => {
@@ -15,9 +14,6 @@ const App = () => {
 	 */
 	return (
 		<div className="App">
-			<Button raised secondary>
-				Random
-			</Button>
 			<TestPage />
 		</div>
 	);

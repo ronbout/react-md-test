@@ -58,10 +58,11 @@ const RegisterForm = ({ userInfo, clearFormFields, handleSubmit }) => {
 		<div
 			style={{
 				padding: "1rem",
-				height: "380px",
+				height: "400px",
 				overflowY: "auto",
+				overflowX: "hidden",
 				border: "1px solid #888",
-				width: "820px",
+				width: "830px",
 				margin: "2rem auto"
 			}}
 		>

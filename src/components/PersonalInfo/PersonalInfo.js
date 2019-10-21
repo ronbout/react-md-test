@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileImg from "./ProfileImg";
 import ProfileCompGraph from "./ProfileCompGraph";
+import Button from "styledComponents/Button";
 
 import "./css/personalInfo.css";
 
@@ -14,19 +15,13 @@ const PersonalInfo = props => {
 				<ProfileImg formattedName={formattedName} />
 				<ProfileCompGraph pct={pct} />
 				<div>
-					<button>Manage My Resumes</button>
+					<Button>Manage My Resumes</Button>
 				</div>
 				<br />
 				<div>
-					<button>
-						<a
-							href="https://www.imdb.com/name/nm6111305/"
-							rel="noopener noreferrer"
-							target="_blank"
-						>
-							Misha Cross IMDB
-						</a>
-					</button>
+					<Button href="https://www.imdb.com/name/nm6111305/" target="_blank">
+						Misha Cross IMDB
+					</Button>
 				</div>
 			</div>
 		</section>

@@ -1571,15 +1571,15 @@ a.md-btn {
 }
 
 .md-btn--color-primary-active {
-  background: rgba(38, 166, 91, 0.12);
+  background: rgba(76, 175, 80, 0.12);
 }
 
 .md-btn--color-secondary-active {
-  background: rgba(253, 144, 9, 0.12);
+  background: rgba(101, 31, 255, 0.12);
 }
 
 .md-btn--text {
-  border-radius: 2px;
+  border-radius: 20px;
   font-weight: 500;
   min-width: 88px;
   padding: 8px 16px;
@@ -2171,7 +2171,7 @@ tbody .md-table-row--active {
 }
 
 .md-card-title--contextual {
-  background: #fd9009;
+  background: #f3e5f5;
   height: 100%;
   left: 0;
   position: absolute;
@@ -2181,7 +2181,7 @@ tbody .md-table-row--active {
 }
 
 .md-card-title--title-contextual {
-  color: #fd9009;
+  color: #651fff;
   font-size: 16px;
   font-weight: 500;
   line-height: 80px;
@@ -3472,7 +3472,7 @@ svg.md-icon {
 }
 
 .md-picker-header {
-  background: #26a65b;
+  background: #4caf50;
   padding: 24px;
 }
 
@@ -3639,7 +3639,7 @@ svg.md-icon {
 }
 
 .md-calendar-date--btn::after {
-  background: #26a65b;
+  background: #4caf50;
   border-radius: 50%;
   content: '';
   display: block;
@@ -3719,7 +3719,7 @@ svg.md-icon {
 }
 
 .md-clock-hand::before, .md-clock-hand::after {
-  background: #26a65b;
+  background: #4caf50;
   border-radius: 50%;
   content: '';
   position: absolute;
@@ -3798,7 +3798,7 @@ svg.md-icon {
 
 .md-circular-progress-path {
   fill: none;
-  stroke: #fd9009;
+  stroke: #651fff;
   stroke-dasharray: 187px;
 }
 
@@ -3877,7 +3877,7 @@ svg.md-icon {
 }
 
 .md-progress--linear {
-  background: #fd9009;
+  background: #ea80fc;
   height: 3px;
   overflow: hidden;
   position: relative;
@@ -3885,7 +3885,7 @@ svg.md-icon {
 }
 
 .md-progress--linear-active {
-  background: #fd9009;
+  background: #651fff;
 }
 
 .md-progress--linear-determinate {
@@ -4110,7 +4110,7 @@ svg.md-icon {
 }
 
 .md-switch-track--on {
-  background: rgba(253, 144, 9, 0.5);
+  background: rgba(156, 39, 176, 0.5);
 }
 
 .md-switch-track--off {
@@ -4139,7 +4139,7 @@ svg.md-icon {
 }
 
 .md-switch-thumb--on {
-  background: #fd9009;
+  background: #9c27b0;
   -webkit-transform: translate3d(20px, -4px, 0);
           transform: translate3d(20px, -4px, 0);
 }
@@ -4206,7 +4206,7 @@ svg.md-icon {
 }
 
 .md-slider-track-fill {
-  background: #26a65b;
+  background: #4caf50;
   border: 0;
   height: 2px;
   left: 0;
@@ -4246,7 +4246,7 @@ svg.md-icon {
 }
 
 .md-slider-thumb--on {
-  background: #26a65b;
+  background: #4caf50;
 }
 
 .md-slider-thumb--active {
@@ -4282,7 +4282,7 @@ svg.md-icon {
 }
 
 .md-slider-thumb--mask-inked {
-  background: rgba(38, 166, 91, 0.15);
+  background: rgba(76, 175, 80, 0.15);
   -webkit-transform: scale(3.5);
           transform: scale(3.5);
   z-index: 4;
@@ -4323,7 +4323,7 @@ svg.md-icon {
 }
 
 .md-slider-thumb--discrete-on::after {
-  border-top-color: #26a65b;
+  border-top-color: #4caf50;
 }
 
 .md-slider-thumb--discrete-off {
@@ -4346,7 +4346,7 @@ svg.md-icon {
 }
 
 .md-slider-thumb--discrete-mask-leaving {
-  background: rgba(38, 166, 91, 0.3);
+  background: rgba(76, 175, 80, 0.3);
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
   z-index: 4;
@@ -4657,7 +4657,7 @@ svg.md-icon {
 }
 
 .md-tab-indicator {
-  background: #fd9009;
+  background: #651fff;
   bottom: 0;
   content: '';
   height: 2px;
@@ -4921,7 +4921,7 @@ svg.md-icon {
 }
 
 .md-divider--text-field::after {
-  background: #26a65b;
+  background: #4caf50;
   content: '';
   display: block;
   height: 2px;
@@ -5602,11 +5602,11 @@ svg.md-icon {
 }
 
 .md-text--theme-primary {
-  color: #26a65b;
+  color: #4caf50;
 }
 
 .md-text--theme-secondary {
-  color: #fd9009;
+  color: #651fff;
 }
 
 .md-text--error {
@@ -5618,11 +5618,11 @@ svg.md-icon {
 }
 
 .md-ink--primary .md-ink {
-  background: rgba(38, 166, 91, 0.26);
+  background: rgba(76, 175, 80, 0.26);
 }
 
 .md-ink--secondary .md-ink {
-  background: rgba(253, 144, 9, 0.26);
+  background: rgba(101, 31, 255, 0.26);
 }
 
 .md-background {
@@ -5634,25 +5634,33 @@ svg.md-icon {
 }
 
 .md-background--primary {
-  background: #26a65b;
+  background: #4caf50;
   color: #fff;
 }
 
 .md-background--secondary {
-  background: #fd9009;
+  background: #651fff;
   color: #fff;
 }
 
 @media screen and (min-width: 1025px) {
   .md-background--primary-hover:hover {
-    background: rgba(38, 166, 91, 0.9);
+    background: rgba(76, 175, 80, 0.9);
   }
   .md-background--secondary-hover:hover {
-    background: rgba(253, 144, 9, 0.9);
+    background: rgba(101, 31, 255, 0.9);
   }
 }
 
 body {
   margin: 0;
+}
+
+/*  make tabs full screen */
+ul.md-tabs li.md-tab {
+  max-width: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 /*# sourceMappingURL=App.css.map */
