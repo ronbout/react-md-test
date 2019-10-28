@@ -1,18 +1,4 @@
-.App {
-	text-align: center;
-}
-
-@import "react-md-globals";
-
-body {
-	margin: 0;
-}
-
-/*  make tabs full screen */
-ul.md-tabs li.md-tab {
-	max-width: none;
-	flex-grow: 1;
-}
+/* _styles.scss */
 
 // need this for dev mode since styles are backwards so requires more precedence
 .md-table-row.md-table-row.data-tables__desserts__row {

@@ -5663,4 +5663,13 @@ ul.md-tabs li.md-tab {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+
+.md-table-row.md-table-row.data-tables__desserts__row {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.md-table-row.data-tables__desserts__row--highlight {
+  background: #fff59d;
+}
 /*# sourceMappingURL=App.css.map */
