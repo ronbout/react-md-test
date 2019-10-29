@@ -1,15 +1,26 @@
 import React from "react";
 import "./styles/css/App.css";
-//import TestPage from "components/TestPage/TestPage";
-import DynamicContentTable from "components/TestDataTables/TestDataTables";
+
+import WithMenus from "components/DataTables2/WithMenus";
 
 const App = () => {
 	return (
 		<div className="App">
-			<DynamicContentTable />
+			<WithMenus />
 		</div>
 	);
 };
+
+//import TestPage from "components/TestPage/TestPage";
+// import DynamicContentTable from "components/TestDataTables/TestDataTables";
+
+// const App = () => {
+// 	return (
+// 		<div className="App">
+// 			<DynamicContentTable />
+// 		</div>
+// 	);
+// };
 
 // test all-purpose setForm hooks for setting up standard forms
 // const App = () => {

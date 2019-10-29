@@ -5672,4 +5672,8 @@ ul.md-tabs li.md-tab {
 .md-table-row.data-tables__desserts__row--highlight {
   background: #fff59d;
 }
+
+.tables__with-menus__kebab-list .md-tile-content--left-icon {
+  padding-left: 16px;
+}
 /*# sourceMappingURL=App.css.map */
