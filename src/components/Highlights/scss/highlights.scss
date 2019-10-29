@@ -5,3 +5,9 @@
 	margin: 4rem auto;
 	border: 1px solid black;
 }
+
+.md-table-body .md-table-row {
+	.table-edit-full-width .md-edit-dialog__label {
+		width: 100%;
+	}
+}
