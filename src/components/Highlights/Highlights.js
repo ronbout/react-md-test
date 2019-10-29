@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+	Button,
 	DataTable,
 	TableHeader,
 	TableBody,
@@ -74,10 +75,13 @@ const Highlights = () => {
 									helpText="max chars = 200"
 								/>
 								<TableColumn
+									onclick
 									className={skills.length ? "" : "md-text--error"}
 									{...skillsTooltip}
 								>
-									{skills.length ? skills.length : "--"}
+									<Button onClick={() => alert("edit Skills")}>
+										{skills.length ? skills.length : "--"}
+									</Button>
 								</TableColumn>
 								<KebabMenu ndx={i} onMenuClick={onMenuClick} />
 							</TableRow>
