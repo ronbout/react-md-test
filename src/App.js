@@ -1,15 +1,25 @@
 import React from "react";
 import "./styles/css/App.css";
 
-import WithMenus from "components/DataTables2/WithMenus";
+import Highlights from "components/Highlights/Highlights";
 
 const App = () => {
 	return (
 		<div className="App">
-			<WithMenus />
+			<Highlights />
 		</div>
 	);
 };
+
+// import WithMenus from "components/DataTables2/WithMenus";
+
+// const App = () => {
+// 	return (
+// 		<div className="App">
+// 			<WithMenus />
+// 		</div>
+// 	);
+// };
 
 //import TestPage from "components/TestPage/TestPage";
 // import DynamicContentTable from "components/TestDataTables/TestDataTables";

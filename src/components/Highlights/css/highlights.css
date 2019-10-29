@@ -1,0 +1,8 @@
+.highlights-section {
+  max-width: 1200px;
+  max-height: 80vh;
+  overflow-y: auto;
+  margin: 4rem auto;
+  border: 1px solid black;
+}
+/*# sourceMappingURL=highlights.css.map */
