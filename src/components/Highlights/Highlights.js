@@ -12,6 +12,10 @@ import highlights from "./highlightsData";
 //import "./styles.css";
 import KebabMenu from "./KebabMenu";
 
+const onMenuClick = (action, ndx) => {
+	alert(action);
+};
+
 const Highlights = () => (
 	<section className="highlights-section">
 		<DataTable baseId="menu-table">
@@ -19,18 +23,44 @@ const Highlights = () => (
 				<TableRow>
 					<TableColumn></TableColumn>
 					<TableColumn grow>Highlight</TableColumn>
-					<TableColumn>Skills</TableColumn>
+					<TableColumn
+						tooltipLabel="# of Skills attached"
+						tooltipDelay={500}
+						tooltipPosition="left"
+					>
+						Skills
+					</TableColumn>
 				</TableRow>
 			</TableHeader>
 			<TableBody>
-				{highlights.map(({ highlight, sequence, skills }, i) => (
-					<TableRow key={`hrow-${sequence}`.replace(/\s+/g, "-")}>
-						<TableColumn>{i + 1}</TableColumn>
-						<TableColumn>{highlight}</TableColumn>
-						<TableColumn>{skills.length}</TableColumn>
-						<KebabMenu />
-					</TableRow>
-				))}
+				{highlights.map(({ highlight, sequence, skills }, i) => {
+					let skillsTooltip = {};
+					if (skills.length) {
+						skillsTooltip = {
+							tooltipStyle: { background: "#ddd", color: "black" },
+							tooltipPosition: "left",
+							tooltipLabel: skills.map(s => (
+								<p>
+									{s.id}-{s.name}
+								</p>
+							))
+						};
+					}
+
+					return (
+						<TableRow key={`hrow-${sequence}`.replace(/\s+/g, "-")}>
+							<TableColumn>{i + 1}</TableColumn>
+							<TableColumn>{highlight}</TableColumn>
+							<TableColumn
+								className={skills.length ? "" : "md-text--error"}
+								{...skillsTooltip}
+							>
+								{skills.length ? skills.length : "--"}
+							</TableColumn>
+							<KebabMenu ndx={i} onMenuClick={onMenuClick} />
+						</TableRow>
+					);
+				})}
 			</TableBody>
 		</DataTable>
 	</section>

@@ -1,7 +1,11 @@
 import React from "react";
 import "./styles/css/App.css";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faArrowsAltV, faCogs } from "@fortawesome/free-solid-svg-icons";
+
 import Highlights from "components/Highlights/Highlights";
+library.add(faArrowsAltV, faCogs);
 
 const App = () => {
 	return (
