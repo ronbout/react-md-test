@@ -52,7 +52,12 @@ const Highlights = () => {
 				onDeleteClick={() => onMenuClick("delete")}
 				onMoveClick={() => onMenuClick("Move")}
 			/>
-			<DataTable baseId="highlights-table" onRowToggle={handleRowToggle}>
+			<DataTable
+				baseId="highlights-table"
+				onRowToggle={handleRowToggle}
+				fixedHeader
+				fixedHeight={500}
+			>
 				<TableHeader>
 					<TableRow>
 						<TableColumn></TableColumn>

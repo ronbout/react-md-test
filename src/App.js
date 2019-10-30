@@ -1,19 +1,22 @@
 import React from "react";
 import "./styles/css/App.css";
 
+import TestPage from "components/TestPage/TestPage";
+//import DynamicContentTable from "components/TestDataTables/TestDataTables";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faArrowsAltV, faCogs } from "@fortawesome/free-solid-svg-icons";
 
-import Highlights from "components/Highlights/Highlights";
+// import Highlights from "components/Highlights/Highlights";
 library.add(faArrowsAltV, faCogs);
 
-const App = () => {
-	return (
-		<div className="App">
-			<Highlights />
-		</div>
-	);
-};
+// const App = () => {
+// 	return (
+// 		<div className="App">
+// 			<Highlights />
+// 		</div>
+// 	);
+// };
 
 // import WithMenus from "components/DataTables2/WithMenus";
 
@@ -25,16 +28,13 @@ const App = () => {
 // 	);
 // };
 
-//import TestPage from "components/TestPage/TestPage";
-// import DynamicContentTable from "components/TestDataTables/TestDataTables";
-
-// const App = () => {
-// 	return (
-// 		<div className="App">
-// 			<DynamicContentTable />
-// 		</div>
-// 	);
-// };
+const App = () => {
+	return (
+		<div className="App">
+			<TestPage />
+		</div>
+	);
+};
 
 // test all-purpose setForm hooks for setting up standard forms
 // const App = () => {
