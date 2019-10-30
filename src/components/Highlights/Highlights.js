@@ -50,6 +50,7 @@ const Highlights = () => {
 			<SelectMenu
 				count={selectCount}
 				onDeleteClick={() => onMenuClick("delete")}
+				onMoveClick={() => onMenuClick("Move")}
 			/>
 			<DataTable baseId="highlights-table" onRowToggle={handleRowToggle}>
 				<TableHeader>

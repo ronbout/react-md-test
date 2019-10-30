@@ -1,17 +1,15 @@
 .highlights-section {
   max-width: 1140px;
-  max-height: 80vh;
-  overflow-y: auto;
   margin: 4rem auto;
   border: 1px solid black;
 }
 
-.md-table-body .md-table-row .table-edit-full-width .md-edit-dialog__label {
-  width: 700px;
+.highlights-section div.md-data-table--responsive {
+  overflow-y: auto;
+  max-height: 80vh;
 }
 
-.md-table-row.md-table-row.data-tables__desserts__row {
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+.md-table-body .md-table-row .table-edit-full-width .md-edit-dialog__label {
+  width: 700px;
 }
 /*# sourceMappingURL=highlights.css.map */
