@@ -1,5 +1,5 @@
 .highlights-section {
-	max-width: 1200px;
+	max-width: 1140px;
 	max-height: 80vh;
 	overflow-y: auto;
 	margin: 4rem auto;
@@ -8,6 +8,10 @@
 
 .md-table-body .md-table-row {
 	.table-edit-full-width .md-edit-dialog__label {
-		width: 100%;
+		width: 700px;
 	}
+}
+
+.md-table-row.md-table-row.data-tables__desserts__row {
+	transition-duration: 2s;
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
 	Button,
+	Card,
 	DataTable,
 	TableHeader,
 	TableBody,
@@ -13,6 +14,7 @@ import highlightsData from "./highlightsData";
 
 //import "./styles.css";
 import KebabMenu from "./KebabMenu";
+import SelectMenu from "./SelectMenu";
 
 const onMenuClick = (action, ndx) => {
 	alert(action);
@@ -20,6 +22,10 @@ const onMenuClick = (action, ndx) => {
 
 const Highlights = () => {
 	const [highlights, setHighlights] = useState(highlightsData);
+	const [selectedRows, setSelectedRows] = useState(
+		highlightsData.map(() => false)
+	);
+	const [selectCount, setSelectCount] = useState(0);
 
 	const onHighlightChange = (ndx, highlight) => {
 		const newHighlights = highlights.slice();
@@ -27,9 +33,25 @@ const Highlights = () => {
 		setHighlights(newHighlights);
 	};
 
+	const handleRowToggle = (row, selected, count) => {
+		console.log("handleRowToggle row, selected, count: ", row, selected, count);
+		let sRows = selectedRows.slice();
+		if (row === 0) {
+			sRows = sRows.map(() => selected);
+		} else {
+			sRows[row - 1] = selected;
+		}
+		setSelectedRows(sRows);
+		setSelectCount(count);
+	};
+
 	return (
-		<section className="highlights-section">
-			<DataTable baseId="menu-table">
+		<Card tableCard className="highlights-section">
+			<SelectMenu
+				count={selectCount}
+				onDeleteClick={() => onMenuClick("delete")}
+			/>
+			<DataTable baseId="highlights-table" onRowToggle={handleRowToggle}>
 				<TableHeader>
 					<TableRow>
 						<TableColumn></TableColumn>
@@ -38,6 +60,7 @@ const Highlights = () => {
 							tooltipLabel="# of Skills attached"
 							tooltipDelay={500}
 							tooltipPosition="left"
+							style={{ paddingLeft: "28px" }}
 						>
 							Skills
 						</TableColumn>
@@ -49,9 +72,10 @@ const Highlights = () => {
 						if (skills.length) {
 							skillsTooltip = {
 								tooltipStyle: { background: "#ddd", color: "black" },
+								tooltipDelay: 500,
 								tooltipPosition: "left",
 								tooltipLabel: skills.map(s => (
-									<p>
+									<p key={s.id}>
 										{s.id}-{s.name}
 									</p>
 								))
@@ -62,6 +86,7 @@ const Highlights = () => {
 							<TableRow key={`hrow-${sequence}`.replace(/\s+/g, "-")}>
 								<TableColumn>{i + 1}</TableColumn>
 								<EditDialogColumn
+									title=""
 									large
 									className="table-edit-full-width"
 									dialogStyle={{ width: "550px" }}
@@ -75,11 +100,10 @@ const Highlights = () => {
 									helpText="max chars = 200"
 								/>
 								<TableColumn
-									onclick
 									className={skills.length ? "" : "md-text--error"}
 									{...skillsTooltip}
 								>
-									<Button onClick={() => alert("edit Skills")}>
+									<Button flat onClick={() => alert("edit Skills")}>
 										{skills.length ? skills.length : "--"}
 									</Button>
 								</TableColumn>
@@ -89,7 +113,7 @@ const Highlights = () => {
 					})}
 				</TableBody>
 			</DataTable>
-		</section>
+		</Card>
 	);
 };
 export default Highlights;

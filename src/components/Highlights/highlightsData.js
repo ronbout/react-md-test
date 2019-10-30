@@ -80,7 +80,7 @@ export default [
 	{
 		id: 11,
 		highlight:
-			"Cisco ASA Firewall troubleshooting and policy change requests for new IP segments that either come on line or that may have been altered dur",
+			"Cisco ASA Firewall troubleshooting and policy change requests for new IP segments that either come on line or that may have been altered.  This is a test of a longer highlight.  I wonder how long???",
 		sequence: 11,
 		skills: []
 	},
