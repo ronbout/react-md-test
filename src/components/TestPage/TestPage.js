@@ -2,8 +2,8 @@ import React from "react";
 // import RegisterFormContainer from "components/forms/RegisterFormContainer";
 // import PersonalInfo from "components/PersonalInfo/PersonalInfo";
 import Highlights from "components/Highlights/Highlights";
-import DynamicContentTable from "components/TestDataTables/DynamicContentTable";
-import { TabsContainer, Tabs, Tab } from "react-md";
+// import DynamicContentTable from "components/TestDataTables/DynamicContentTable";
+// import { TabsContainer, Tabs, Tab } from "react-md";
 // import {
 // 	TabbedUI,
 // 	TabList,
@@ -39,16 +39,7 @@ const TestPage = props => {
 	return (
 		<div className="test-page" style={{ padding: "1rem 2rem" }}>
 			<h2>DataTables Test</h2>
-			<TabsContainer panelClassName="md-grid" colored>
-				<Tabs tabId="test-page">
-					<Tab label="Highlights">
-						<Highlights />
-					</Tab>
-					<Tab label="Experience">
-						<DynamicContentTable />
-					</Tab>
-				</Tabs>
-			</TabsContainer>
+			<Highlights />
 		</div>
 	);
 	//return (

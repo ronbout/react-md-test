@@ -10,11 +10,13 @@ import {
 	EditDialogColumn
 } from "react-md";
 import "./css/highlights.css";
+//import { objCopy } from "assets/js/library";
 import highlightsData from "./highlightsData";
 
 //import "./styles.css";
 import KebabMenu from "./KebabMenu";
 import SelectMenu from "./SelectMenu";
+import SearchHighlightsDialog from "./SearchHighlightsDialog";
 
 const onMenuClick = (action, ndx) => {
 	alert(action);
@@ -22,10 +24,29 @@ const onMenuClick = (action, ndx) => {
 
 const Highlights = () => {
 	const [highlights, setHighlights] = useState(highlightsData);
+	const [showSearch, setShowSearch] = useState(false);
 	const [selectedRows, setSelectedRows] = useState(
 		highlightsData.map(() => false)
 	);
 	const [selectCount, setSelectCount] = useState(0);
+
+	// let highlights = highlightsData;
+
+	// const setHighlights = newHighlights => {
+	// 	highlights = objCopy(newHighlights);
+	// };
+
+	const showSearchDialog = () => {
+		setShowSearch(true);
+	};
+
+	const hideSearchDialog = () => {
+		setShowSearch(false);
+	};
+
+	const searchHighlights = () => {
+		alert("searchHighlights");
+	};
 
 	const onHighlightChange = (ndx, highlight) => {
 		const newHighlights = highlights.slice();
@@ -51,6 +72,7 @@ const Highlights = () => {
 				count={selectCount}
 				onDeleteClick={() => onMenuClick("delete")}
 				onMoveClick={() => onMenuClick("Move")}
+				showSearchDialog={showSearchDialog}
 			/>
 			<DataTable
 				baseId="highlights-table"
@@ -97,12 +119,12 @@ const Highlights = () => {
 									className="table-edit-full-width"
 									dialogStyle={{ width: "550px" }}
 									style={{ width: "100%" }}
-									value={highlight}
-									onChange={val => onHighlightChange(i, val)}
+									defaultValue={highlight}
+									onOkClick={(value, event) => onHighlightChange(i, value)}
 									label="Edit Highlight"
 									rows={1}
 									maxRows={4}
-									maxlength={200}
+									maxLength={200}
 									helpText="max chars = 200"
 								/>
 								<TableColumn
@@ -119,6 +141,11 @@ const Highlights = () => {
 					})}
 				</TableBody>
 			</DataTable>
+			<SearchHighlightsDialog
+				searchHighlights={searchHighlights}
+				showSearch={showSearch}
+				hideSearchDialog={hideSearchDialog}
+			/>
 		</Card>
 	);
 };
