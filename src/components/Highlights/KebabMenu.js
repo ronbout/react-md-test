@@ -5,22 +5,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const menuItems = (ndx, onMenuClick) => {
 	return [
+		/*
 		{
 			leftIcon: <FontIcon secondary>edit</FontIcon>,
 			primaryText: "Edit",
 			onClick: () => onMenuClick("edit", ndx)
 		},
+		*/
 		{
-			leftIcon: (
-				<FontAwesomeIcon
-					style={{ color: "#651fff" }}
-					size="lg"
-					fixedWidth
-					icon="arrows-alt-v"
-				/>
-			),
-			primaryText: "Move",
-			onClick: () => onMenuClick("move", ndx)
+			leftIcon: <FontIcon secondary>arrow_upward</FontIcon>,
+			primaryText: "Move Up",
+			onClick: () => onMenuClick("moveUp", ndx)
+		},
+		{
+			leftIcon: <FontIcon secondary>arrow_downward</FontIcon>,
+			primaryText: "Move Down",
+			onClick: () => onMenuClick("moveDown", ndx)
 		},
 		{
 			leftIcon: (

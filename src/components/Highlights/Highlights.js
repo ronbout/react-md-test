@@ -18,10 +18,6 @@ import KebabMenu from "./KebabMenu";
 import SelectMenu from "./SelectMenu";
 import SearchHighlightsDialog from "./SearchHighlightsDialog";
 
-const onMenuClick = (action, ndx) => {
-	alert(action);
-};
-
 const Highlights = () => {
 	const [highlights, setHighlights] = useState(highlightsData);
 	const [showSearch, setShowSearch] = useState(false);
@@ -35,6 +31,14 @@ const Highlights = () => {
 	// const setHighlights = newHighlights => {
 	// 	highlights = objCopy(newHighlights);
 	// };
+
+	/**
+	 * set highlight refs for focus
+	 */
+
+	const onMenuClick = (action, ndx) => {
+		alert(action);
+	};
 
 	const showSearchDialog = () => {
 		setShowSearch(true);

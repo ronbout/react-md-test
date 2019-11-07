@@ -8,16 +8,22 @@ import {
 } from "react-md";
 
 const AdvancedSearch = props => {
+	const [termType, setTermType] = useState("S");
+
+	const onChangeTermType = termType => {
+		setTermType(termType);
+	};
 	return (
 		<div style={{ textAlign: "left", marginTop: "24px" }}>
 			<div>
 				<SelectionControlGroup
 					id="skills-techtags-radios"
-					name="skillsOrTechtags"
+					name="termType"
 					type="radio"
 					inline
 					label="Search Term Type"
-					defaultValue="S"
+					value={termType}
+					onChange={onChangeTermType}
 					controls={[
 						{
 							label: "Skill",
@@ -26,30 +32,6 @@ const AdvancedSearch = props => {
 						{
 							label: "Techtag",
 							value: "T"
-						}
-					]}
-				/>
-			</div>
-			<div>
-				<SelectionControlGroup
-					id="highlight-or-skills-radios"
-					name="highlightsOrSkills"
-					type="radio"
-					inline
-					label="Search Columns"
-					defaultValue="S"
-					controls={[
-						{
-							label: "Highlights (string search)",
-							value: "H"
-						},
-						{
-							label: "Skills",
-							value: "S"
-						},
-						{
-							label: "Both (string search)",
-							value: "B"
 						}
 					]}
 				/>
@@ -104,7 +86,7 @@ const SearchHighlightsDialog = ({
 			onHide={hideSearchDialog}
 			actions={actions}
 			title="Search Highlights"
-			height={520}
+			height={400}
 			width={600}
 		>
 			<div>
