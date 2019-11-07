@@ -1,6 +1,7 @@
 /* SelectMenu.js */
 import React from "react";
-import { Button, TableCardHeader } from "react-md";
+import { TableCardHeader } from "styledComponents/DataTables";
+import Button from "styledComponents/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SelectMenu = ({
@@ -18,7 +19,7 @@ const SelectMenu = ({
 			contextualTitle={`${count} item${count > 1 ? "s" : ""} selected`}
 			actions={[
 				<Button
-					flat={true}
+					variant="flat"
 					key="move"
 					onClick={onMoveClick}
 					tooltipLabel="Move selected rows"
@@ -33,7 +34,7 @@ const SelectMenu = ({
 					/>
 				</Button>,
 				<Button
-					icon
+					variant="icon"
 					className="md-text--error"
 					key="delete"
 					onClick={onDeleteClick}
@@ -45,7 +46,7 @@ const SelectMenu = ({
 				</Button>
 			]}
 		>
-			<Button flat iconChildren="search" onClick={showSearchDialog}>
+			<Button variant="flat" iconChildren="search" onClick={showSearchDialog}>
 				Search
 			</Button>
 		</TableCardHeader>

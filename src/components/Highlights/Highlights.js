@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+import { Card } from "styledComponents/Card";
+import Button from "styledComponents/Button";
 import {
-	Button,
-	Card,
 	DataTable,
 	TableHeader,
 	TableBody,
 	TableRow,
 	TableColumn,
 	EditDialogColumn
-} from "react-md";
+} from "styledComponents/DataTables";
 import "./css/highlights.css";
 //import { objCopy } from "assets/js/library";
 import highlightsData from "./highlightsData";
@@ -135,7 +135,11 @@ const Highlights = () => {
 									className={skills.length ? "" : "md-text--error"}
 									{...skillsTooltip}
 								>
-									<Button flat onClick={() => alert("edit Skills")}>
+									<Button
+										variant="flat"
+										color="secondary"
+										onClick={() => alert("edit Skills")}
+									>
 										{skills.length ? skills.length : "--"}
 									</Button>
 								</TableColumn>

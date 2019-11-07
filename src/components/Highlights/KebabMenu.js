@@ -1,6 +1,7 @@
-/* KebabMenu.jsx */
+/* KebabMenu.js */
 import React from "react";
-import { MenuButtonColumn, FontIcon } from "react-md";
+import { MenuButtonColumn } from "styledComponents/DataTables";
+import { FontIcon } from "styledComponents/FontIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const menuItems = (ndx, onMenuClick) => {
