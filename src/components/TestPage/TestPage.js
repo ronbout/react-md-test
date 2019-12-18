@@ -1,7 +1,7 @@
 import React from "react";
 // import RegisterFormContainer from "components/forms/RegisterFormContainer";
 // import PersonalInfo from "components/PersonalInfo/PersonalInfo";
-import Highlights from "components/Highlights/Highlights";
+import TestAutoComplete from "components/testAutoComplete/TestAutoComplete";
 // import DynamicContentTable from "components/TestDataTables/DynamicContentTable";
 // import { TabsContainer, Tabs, Tab } from "react-md";
 // import {
@@ -38,8 +38,8 @@ import Highlights from "components/Highlights/Highlights";
 const TestPage = props => {
 	return (
 		<div className="test-page" style={{ padding: "1rem 2rem" }}>
-			<h2>DataTables Test</h2>
-			<Highlights />
+			<h2>Auto Complete Test</h2>
+			<TestAutoComplete />
 		</div>
 	);
 	//return (
